@@ -1,0 +1,187 @@
+:root {
+    --black: #1C1C1C;
+    --gray: #919191;
+    --light-grey: #EBEBEB;
+    --hot-pink: #FF214F;
+    --primary-font: 'Roboto', sans-serif;
+
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--light-grey);
+    font-family: var(--primary-font);
+}
+
+/* common css class name it could be use all around,sothat we change the code in one place but could be useable everywhere */
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1250px;
+    padding: 0 25px;
+    /* its a really powerfull csss class to handle the responsive website */
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+
+}
+
+.section {
+    padding: 10rem 25px;
+
+
+}
+
+.section_text-primary,
+.section_text-secondary,
+.section_text-tertiary {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.section_text-primary {
+    color: var(--black);
+}
+
+.section_text-secondary {
+    color: var(--hot-pink);
+}
+
+.section_text-tertiary {
+    color: var(--light-grey);
+}
+
+.section_title-primary,
+.section_title-secondary,
+.section_title-tertiary {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.section_title-primary {
+    color: var(--black);
+}
+
+.section_title-secondary {
+    color: var(--hot-pink);
+}
+
+.section_title-tertiary {
+    color: var(--light-grey);
+}
+
+.line-primary,
+.line-tertiary,
+.line-secondary {
+    height: 1px;
+    width: 100%;
+    margin-left: 5px;
+
+}
+
+.line-primary {
+    background: var(--hot-pink);
+}
+
+.line-tertiary {
+    background: var(--light-grey);
+}
+
+.line-secondary {
+    background: var(--black);
+}
+
+.section-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.photo-gallery img {
+    height: 100%;
+    width: 100%;
+}
+
+.long-img {
+    grid-row: span 2;
+}
+
+.numbers ol {
+    margin-top: 4px;
+}
+
+.numbers ol:hover {
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+.part-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.black-container {
+    background: var(--black);
+
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* footer */
+.line-footer {
+    width: 100%;
+    height: 1px;
+    background: var(--black);
+}
+
+@media only screen and (max-width: 850px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .line-primary,
+    .line-tertiary,
+    .line-secondary {
+        display: none;
+    }
+
+    .section-title-container {
+        justify-content: center;
+
+    }
+
+    .section_text-primary,
+    .section_text-secondary,
+    .section_text-tertiary{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+}
